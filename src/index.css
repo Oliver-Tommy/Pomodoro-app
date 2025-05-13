@@ -6,15 +6,34 @@ body {
   padding: 0;
 }
 
+h1 {
+  margin: 0;
+}
+
+.title-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px;
+}
+
+.title {
+  font-size: 14px;
+}
+
+.controls {
+  display: flex;
+  gap: 5px;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
 .font {
   font-family: 'Pixelify Sans', sans-serif;
   font-size: 16px;
   line-height: 1.5;
-}
-
-.center {
-  margin: auto;
-  text-align: center;
-  width: 50%;
-  padding: 10px;
 }

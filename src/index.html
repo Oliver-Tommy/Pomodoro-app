@@ -8,13 +8,17 @@
     <script src="script.js" defer></script>
   </head>
   <body>
-    <span>
-    <h1 class="center">Pomodoro Timer</h1>
-    </span>
-    <div class="controls">
-      <img src="../src/assets/images/-.png" alt"Minimize" class="icon" />
-      <img src="../src/assets/images/x.png" alt"Close" class="icon" />
+    <div class="title-bar">
+      <span class="title">
+        <h1>Pomodoro Timer</h1>
+      </span>
+      <div class="controls">
+        <img src="../src/assets/images/-.png" alt"Minimize" class="icon" id="minimize" />
+        <img src="../src/assets/images/x.png" alt"Close" class="icon" id="close" />
+      </div>
     </div>
+
+    <!-- Timer -->
     <div class="container">
       <div class="timer">
         <span id="time">25:00</span>
