@@ -1,13 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
 
+/* General body styling for pastel theme */
 body {
   font-family: 'Pixelify Sans', sans-serif;
   margin: 0;
   padding: 0;
-}
-
-h1 {
-  margin: 0;
+  background-color: #ffe4e1;
+  color: #ff69b4;
 }
 
 .title-bar {
@@ -17,18 +16,22 @@ h1 {
   padding: 5px 10px;
 }
 
-.title {
-  font-size: 14px;
+/* Title styling */
+.title h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  color: #ff69b4;
 }
 
-.controls {
+.controlbar {
   display: flex;
   gap: 5px;
 }
 
+/* Control bar icons */
 .icon {
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   cursor: pointer;
 }
 
@@ -36,4 +39,129 @@ h1 {
   font-family: 'Pixelify Sans', sans-serif;
   font-size: 16px;
   line-height: 1.5;
+}
+
+.container {
+  position: relative;
+  text-align: center;
+  padding-bottom: 200px;
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../src/assets/images/pomodoro.png');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.1;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Timer styling */
+.timer {
+  font-size: 6rem;
+  font-weight: bold;
+  color: #ff69b4;
+  padding-bottom: 20px;
+  padding-top: 100px;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Button styling */
+.controls button {
+  font-size: 1.5rem;
+  padding: 10px 20px;
+  background-color: #ffc0cb;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Button hover effect */
+.controls button:hover {
+  background-color: #ffb6c1;
+  transform: scale(1.05);
+}
+
+/* Remove focus outline for buttons */
+.controls button:focus {
+  outline: none;
+}
+
+/* Active button styles */
+.controls button.active {
+  background-color: #ff69b4;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transform: scale(1.1);
+}
+
+/* Custom Alert Box Styling */
+.custom-alert {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.custom-alert.hidden {
+  display: none; /* Hide the alert box by default */
+}
+
+.custom-alert-content {
+  background-color: #ffe4e1; /* Pastel pink background */
+  color: #ff69b4; /* Pink text */
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.custom-alert-content h2 {
+  margin: 0 0 10px;
+  font-size: 2rem;
+}
+
+.custom-alert-content p {
+  margin: 0 0 20px;
+  font-size: 1.2rem;
+}
+
+.custom-alert-content button {
+  font-size: 1rem;
+  padding: 10px 20px;
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.custom-alert-content button:hover {
+  background-color: #ff1493; /* Darker pink on hover */
+}
+
+/* Smooth transitions for all elements */
+* {
+  transition: all 0.3s ease;
 }
