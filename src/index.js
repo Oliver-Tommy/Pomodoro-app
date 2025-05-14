@@ -14,6 +14,7 @@ const createWindow = () => {
     width: 800,
     height: 600,
     frame: false, // Disable the default top bar
+    icon: __dirname + "../src/assets/images/pomodoro.png", // Set the custom app icon
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false,
@@ -27,7 +28,7 @@ const createWindow = () => {
   mainWindow.setMenuBarVisibility(false);
 
   // Open the DevTools.
-  mainWindow.webContents.openDevTools();
+  // mainWindow.webContents.openDevTools();
 };
 
 // This method will be called when Electron has finished
