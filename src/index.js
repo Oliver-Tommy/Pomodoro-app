@@ -11,8 +11,9 @@ let mainWindow;
 const createWindow = () => {
   // Create the browser window.
   mainWindow = new BrowserWindow({
-    width: 600,
+    width: 800,
     height: 600,
+    frame: false, // Disable the default top bar
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false,
@@ -21,6 +22,9 @@ const createWindow = () => {
 
   // and load the index.html of the app.
   mainWindow.loadFile('src/index.html');
+
+  // Remove the default menu bar
+  mainWindow.setMenuBarVisibility(false);
 
   // Open the DevTools.
   mainWindow.webContents.openDevTools();

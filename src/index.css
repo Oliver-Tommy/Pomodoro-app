@@ -14,6 +14,9 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 5px 10px;
+  color: white;
+  -webkit-app-region: drag;
+  cursor: pointer;
 }
 
 /* Title styling */
@@ -25,14 +28,14 @@ body {
 
 .controlbar {
   display: flex;
-  gap: 5px;
+  gap: 10px;
 }
 
-/* Control bar icons */
-.icon {
+.controlbar img {
   width: 30px;
   height: 30px;
   cursor: pointer;
+  -webkit-app-region: no-drag; /* Exclude buttons from drag region */
 }
 
 .font {
@@ -50,10 +53,10 @@ body {
 .container::before {
   content: "";
   position: absolute;
-  top: 20px;
+  top: -30px;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 134%;
   background-image: url('../src/assets/images/pomodoro.png');
   background-size: cover;
   background-position: center;
@@ -68,7 +71,7 @@ body {
   font-weight: bold;
   color: #ff69b4;
   padding-bottom: 20px;
-  padding-top: 100px;
+  padding-top: 160px;
 }
 
 .controls {

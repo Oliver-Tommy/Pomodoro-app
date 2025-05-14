@@ -23,6 +23,20 @@ module.exports = {
       name: '@electron-forge/maker-rpm',
       config: {},
     },
+    {
+      name: '@electron-forge/maker-dmg',
+      config: {
+        background: './assets/dmg-background.png',
+        format: 'ULFO'
+      }
+    },
+    {
+      name: '@electron-forge/maker-pkg',
+      config: {
+        keychain: 'my-secret-ci-keychain'
+        // other configuration options
+      }
+    }
   ],
   plugins: [
     {
