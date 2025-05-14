@@ -152,6 +152,7 @@ body {
 
 .custom-alert-content button {
   font-size: 1rem;
+  font-family: 'Pixelify Sans', sans-serif;
   padding: 10px 20px;
   background-color: #ff69b4;
   color: white;
