@@ -1,4 +1,4 @@
-const { app, BrowserWindow, ipcMain } = require('electron');
+const { app, BrowserWindow, ipcMain, nativeImage } = require('electron');
 const path = require('node:path');
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
@@ -14,7 +14,6 @@ const createWindow = () => {
     width: 800,
     height: 600,
     frame: false, // Disable the default top bar
-    icon: __dirname + "../src/assets/images/pomodoro.png", // Set the custom app icon
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false,

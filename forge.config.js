@@ -3,40 +3,29 @@ const { FuseV1Options, FuseVersion } = require('@electron/fuses');
 
 module.exports = {
   packagerConfig: {
+    icon: './src/assets/pomodoro', // Path to the icon
     asar: true,
   },
   rebuildConfig: {},
   makers: [
     {
       name: '@electron-forge/maker-squirrel',
-      config: {},
-    },
-    {
-      name: '@electron-forge/maker-zip',
-      platforms: ['darwin'],
+      config: {
+        setupIcon: './src/assets/pomodoro.ico', // Icon for the installer (Setup.exe)
+      },
     },
     {
       name: '@electron-forge/maker-deb',
       config: {},
     },
     {
-      name: '@electron-forge/maker-rpm',
-      config: {},
-    },
-    {
       name: '@electron-forge/maker-dmg',
       config: {
         background: './assets/dmg-background.png',
-        format: 'ULFO'
+        format: 'ULFO',
+        icon: './src/assets/pomodoro.icns',
       }
     },
-    {
-      name: '@electron-forge/maker-pkg',
-      config: {
-        keychain: 'my-secret-ci-keychain'
-        // other configuration options
-      }
-    }
   ],
   plugins: [
     {

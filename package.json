@@ -1,8 +1,8 @@
 {
-  "name": "pomodoro-app",
-  "productName": "pomodoro-app",
+  "name": "pomodoro",
+  "productName": "pomodoro",
   "version": "1.0.0",
-  "description": "My Electron application description",
+  "description": "An application to help you manage your time using the Pomodoro Technique.",
   "main": "src/index.js",
   "scripts": {
     "start": "electron-forge start",
